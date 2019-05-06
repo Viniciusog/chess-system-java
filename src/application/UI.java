@@ -3,7 +3,8 @@ package application;
 import chess.ChessPiece;
 
 public class UI {
-
+	
+	//Imprimi o tabuleiro no console
 	public static void printBoard(ChessPiece[][] pieces) {
 
 		for (int i = 0; i < pieces.length; i++) {
