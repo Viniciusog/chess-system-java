@@ -5,8 +5,6 @@ public class BoardException extends RuntimeException{
 	
 	//Repassa a mensagem para a Classe RuntimeException
 	public BoardException(String msg) {
-		super(msg);
-		
+		super(msg);		
 	}
-
 }
