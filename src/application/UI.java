@@ -1,6 +1,10 @@
 package application;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 import chess.ChessPiece;
+import chess.ChessPosition;
 import chess.Color;
 
 public class UI {
@@ -26,6 +30,19 @@ public class UI {
 	public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
+	public static ChessPosition readChessPosition(Scanner sc) {
+		// a3 a, 3
+		try {
+			String s = sc.next();
+			char column = s.charAt(0);
+			int row = Integer.parseInt(s.substring(1));
+			return new ChessPosition(column, row);
+
+		} catch (RuntimeException e) {
+			throw new InputMismatchException("Erro lendo posição de xadrez. Valores válidos são de a1 até h8");
+		}
+	}
+
 	// Imprimi o tabuleiro no console
 	public static void printBoard(ChessPiece[][] pieces) {
 
@@ -40,17 +57,15 @@ public class UI {
 	}
 
 	private static void printPiece(ChessPiece piece) {
-    	if (piece == null) {
-            System.out.print("-");
-        }
-        else {
-            if (piece.getColor() == Color.WHITE) {
-                System.out.print(ANSI_WHITE + piece + ANSI_RESET);
-            }
-            else {
-                System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
-            }
-        }
-        System.out.print(" ");
+		if (piece == null) {
+			System.out.print("-");
+		} else {
+			if (piece.getColor() == Color.WHITE) {
+				System.out.print(ANSI_WHITE + piece + ANSI_RESET);
+			} else {
+				System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
+			}
+		}
+		System.out.print(" ");
 	}
 }
