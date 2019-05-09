@@ -27,9 +27,11 @@ public class ChessPosition {
 		return new Position(8 - row, column - 'a' );
 	}
 	
+	//Pega uma posiçaõ de matriz e passa para uma posição de xadrez
 	protected static ChessPosition fromPosition(Position position) {
 		//no xadrez informa primeiro a coluna e depois a linha
-		return new ChessPosition((char) ('a' - position.getColumn()), 8 - position.getRow());
+		//é + porque quer o codigo da letra a + a coluna da matriz
+		return new ChessPosition((char) ('a' + position.getColumn()), 8 - position.getRow());
 	}
 	
 	@Override 
