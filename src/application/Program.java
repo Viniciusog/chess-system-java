@@ -34,10 +34,18 @@ public class Program {
 				System.out.print("Destino ");
 
 				ChessPosition target = UI.readChessPosition(sc);
+				
+				//Por padrão vai colocar uma rainha no lugar
 				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
 				
 				if(capturedPiece != null) {
 					captured.add(capturedPiece);
+				}
+				
+				if(chessMatch.getPromoted() != null) {
+					System.out.println("Entre com uma peça para promoção (B/N/R/Q): ");
+					String type = sc.nextLine();
+					chessMatch.replacePromotedPiece(type); //Aí trocamos a rainha (antigo peão) pela peça escolhida
 				}
 			
 			} catch (ChessException e) {
