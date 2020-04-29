@@ -23,7 +23,7 @@ public class Program {
 				UI.clearScreen();
 				UI.printMatch(chessMatch, captured);
 				System.out.println();
-				System.out.print("Origem ");
+				System.out.print("Origin ");
 				ChessPosition source = UI.readChessPosition(sc);
 				
 				boolean[][] possibleMoves = chessMatch.possibleMoves(source);
@@ -31,7 +31,7 @@ public class Program {
 				UI.printBoard(chessMatch.getPieces(), possibleMoves);
 
 				System.out.println();
-				System.out.print("Destino ");
+				System.out.print("Destination ");
 
 				ChessPosition target = UI.readChessPosition(sc);
 				
@@ -43,7 +43,7 @@ public class Program {
 				}
 				
 				if(chessMatch.getPromoted() != null) {
-					System.out.println("Entre com uma peça para promoção (B/N/R/Q): ");
+					System.out.println("Enter a piece for promotion (B/N/R/Q): ");
 					String type = sc.nextLine();
 					chessMatch.replacePromotedPiece(type); //Aí trocamos a rainha (antigo peão) pela peça escolhida
 				}

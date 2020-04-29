@@ -31,7 +31,7 @@ public class Bishop extends ChessPiece {
 			p.setValues(p.getRow() - 1, p.getColumn() - 1);
 		}
 
-		// Quando terminar as posições fazias, verifica se a peça é amiga ou adversária
+		// Quando terminar as posições vazias, verifica se a peça é amiga ou adversária
 		if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
