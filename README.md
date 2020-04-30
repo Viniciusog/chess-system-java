@@ -1,3 +1,3 @@
 # Chess-System-Java
 
-![](gifchess.gif)
+![](src/gifchess.gif)
