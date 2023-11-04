@@ -1,6 +1,7 @@
 # Chess-System-Java
+Gif:
+![Gif](https://github.com/Viniciusog/chess-system-java/blob/master/src/gifchess.gif)
 
-![](src/gifchess.gif)
 ---
 ### How to run?
 - Clone this project and open in your ide (Eclipse, Netbeans, Intellij..) and run the code
