@@ -1,5 +1,5 @@
 # Chess-System-Java
-Gif:
+Gif: <br>
 ![Gif](https://github.com/Viniciusog/chess-system-java/blob/master/src/gifchess.gif)
 
 ---
